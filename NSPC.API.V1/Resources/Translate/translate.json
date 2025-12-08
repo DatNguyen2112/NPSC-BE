@@ -1,0 +1,170 @@
+﻿{
+  "profile_empty_demand": {
+    "vn": "Chưa nhập thông tin",
+    "en": "No information entered",
+    "jp": "情報が入力されていません",
+    "zh": "未输入任何信息"
+  },
+  "profile_type_name": {
+    "franchise": {
+      "vn": "Hồ sơ Nhượng quyền",
+      "en": "Franchise",
+      "jp": "フランチャイズ",
+      "zh": "特许经营"
+    },
+    "buyer": {
+      "vn": "Hồ sơ bên mua",
+      "en": "Buyer",
+      "jp": "フランチャイズ",
+      "zh": "特许经营"
+    },
+    "seller": {
+      "vn": "Hồ sơ bên bán",
+      "en": "Seller",
+      "jp": "フランチャイズ",
+      "zh": "特许经营"
+    }
+  },
+  "general_term": {
+    "franchise": {
+      "vn": "Nhượng quyền",
+      "en": "Franchise",
+      "jp": "フランチャイズ",
+      "zh": "特许经营"
+    }
+  },
+  "seller_investment_note": {
+    "complete_sale": {
+      "vn": "Giá trị đầu tư",
+      "en": "Complete sale",
+      "jp": "全部売却",
+      "zh": "投资价值"
+    },
+    "financial_investment": {
+      "vn": "Đầu tư tài chính",
+      "en": "Financial investment",
+      "jp": "金融投資",
+      "zh": "金融投资"
+    },
+    "business_assets_selling": {
+      "vn": "Giá trị bán",
+      "en": "Selling price",
+      "jp": "リースまたは販売価格",
+      "zh": "租赁或销售价格"
+    },
+    "business_assets_leasing": {
+      "vn": "Giá trị cho thuê",
+      "en": "Leasing price",
+      "jp": "リース価格",
+      "zh": "租赁价格"
+    },
+    "investment_required": {
+      "vn": "Khoản đầu tư mong muốn",
+      "en": "Investment required",
+      "jp": "希望する投資",
+      "zh": "期望的投资"
+    },
+    "total_output": {
+      "vn": "Sản lượng trung bình",
+      "en": "Total output products",
+      "jp": "平均収量",
+      "zh": "平均产量"
+    },
+    "total_outlet": {
+      "vn": "Số lượng cửa hàng toàn cầu",
+      "en": "Total Global Outlets",
+      "jp": "総アウトレット",
+      "zh": "网点总数"
+    }
+  },
+  "location_note": {
+    "assets_location": {
+      "vn": "Vị trí của Tài sản",
+      "en": "Business Assets Location",
+      "jp": "事業資産の場所",
+      "zh": "商业资产位置"
+    },
+    "company_location": {
+      "vn": "Trụ sở chính / Địa điểm kinh doanh",
+      "en": "Headquarter / Business Location",
+      "jp": "本社/事業所",
+      "zh": "总公司/营业地点"
+    }
+  },
+  "established_year_note": {
+    "normal": {
+      "vn": "Năm thành lập doanh nghiệp",
+      "en": "Year of Establishment",
+      "jp": "設立年",
+      "zh": "成立年份"
+    },
+    "assets": {
+      "vn": "Thời điểm mua tài sản",
+      "en": "Originally purchased year",
+      "jp": "最初に購入した年",
+      "zh": "最初购买年份"
+    }
+  },
+  "price_calculation_method_note": {
+    "vn": "Hình thức thanh toán",
+    "en": "Price calculation method",
+    "jp": "価格計算方法",
+    "zh": "价格计算方法"
+  },
+  "response_message": {
+    "update_info_success": {
+      "vn": "Cập nhật thông tin tài khoản thành công",
+      "en": "Successfully updated account information",
+      "jp": "アカウント情報が正常に更新されました",
+      "zh": "成功更新账户信息"
+    },
+    "update_info_failed": {
+      "vn": "Cập nhật thông tin tài khoản không thành công",
+      "en": "Failed to update account information",
+      "jp": "アカウント情報の更新に失敗しました",
+      "zh": "账户信息更新失败"
+    },
+    "no_user_found": {
+      "vn": "Tài khoản {0} không tồn tại trong hệ thống. Vui lòng đăng ký mới.",
+      "en": "Account {0} does not exist in the system. Please register a new one.",
+      "jp": "アカウント{0}はシステムに存在しません。 新しいものを登録してください。",
+      "zh": "系统中不存在帐户 {0}. 请注册一个新的."
+    },
+    "wrong_password": {
+      "vn": "Sai mật khẩu cho tài khoản {0}",
+      "en": "Wrong password for account {0}",
+      "jp": "アカウント{0}のパスワードが間違っています",
+      "zh": "帐户 {0} 的密码错误"
+    },
+    "locked_account": {
+      "vn": "Tài khoản {0} bị khóa hoặc chưa kích hoạt. Vui lòng kích hoạt với Email hoặc liên hệ Quản trị viên.",
+      "en": "Account {0} is locked or not activated. Please activate with Email or contact Administrator.",
+      "jp": "アカウント{0}はロックされているか、アクティブ化されていません。 メールでアクティベートするか、管理者に連絡してください。",
+      "zh": "帐户 {0} 已锁定或未激活。 请使用电子邮件激活或联系管理员。"
+    },
+    "close_account": {
+      "vn": "Tài khoản {0} đã bị đóng vĩnh viễn.",
+      "en": "Account {0} is permanently closed.",
+      "jp": "アカウント {0} は完全に閉鎖されています",
+      "zh": "賬戶 {0} 被永久關閉"
+    }
+  },
+  "description_partner": {
+    "vn": "Tốt nhất cho doanh nghiệp của bạn",
+    "en": "Best for your business",
+    "jp": "あなたのビジネスに最適",
+    "zh": "最适合您的业务"
+  },
+  "partner_email_used": {
+    "vn": "Email đã được sử dụng bởi một tài khoản khác.",
+    "en": "Email is already used by another account.",
+    "jp": "メールはすでに別のアカウントで使用されています。",
+    "jh": "电子邮件已被另一个帐户使用。"
+  },
+  "proposal_limited_user_connection": {
+    "vn": "Hạn ngạch kết nối của bạn đã đạt đến giới hạn, không thể gửi thêm đề xuất.",
+    "en": "Your connection quota has reached its limit, unable to send proposal.",
+    "jp": "接続クォータが制限に達し、プロポーザルを送信できません。",
+    "zh": "您的连接配额已达到上限，无法发送提案。"
+  }
+}
