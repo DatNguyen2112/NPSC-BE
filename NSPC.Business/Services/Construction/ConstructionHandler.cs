@@ -2225,6 +2225,7 @@ namespace NSPC.Business.Services
                     tuple.Constructions.PriorityCode =
                         ConstructionConstants.FetchCode(tuple.Row.GetValue<string>(5))?.Code ?? null;
                     tuple.Constructions.PriorityName = tuple.Row.GetValue<string>(5) ?? null;
+                    tuple.Constructions.Note = tuple.Row.GetValue<string>(6);
                     tuple.Constructions.InvestorId = _dbContext.sm_Investor.AsNoTracking()
                         .Include(x => x.InvestorType)
                         .FirstOrDefault(x => x.Name == tuple.Row.GetValue<string>(6)).Id;
