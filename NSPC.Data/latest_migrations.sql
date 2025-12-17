@@ -195,6 +195,7 @@ CREATE TABLE "mk_PhongBan" (
     "CreatedOnDate" timestamp without time zone NOT NULL,
     "CreatedByUserName" text NULL,
     "LastModifiedByUserName" text NULL,
+    "TenantId" uuid NULL,
     CONSTRAINT "PK_mk_PhongBan" PRIMARY KEY ("Id")
 );
 

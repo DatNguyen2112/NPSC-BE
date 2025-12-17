@@ -247,7 +247,11 @@ namespace NSPC.Business.Services
 
         private Expression<Func<sm_TaskPersonal, bool>> BuildQuery(TaskPersonalQueryModel query)
         {
+            var currentUser = Helper.GetRequestInfo(_httpContextAccessor);
+            
             var predicate = PredicateBuilder.New<sm_TaskPersonal>(true);
+            
+            predicate.And(x => x.CreatedByUserId == currentUser.UserId);
             
             if (!string.IsNullOrEmpty(query.FullTextSearch))
                 predicate.And(s => s.Code.ToLower().Contains(query.FullTextSearch.ToLower()) 
