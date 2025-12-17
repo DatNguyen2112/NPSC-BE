@@ -267,7 +267,7 @@ namespace NSPC.Business.Services
                 bool isOverload = false;
                 var list = new List<EmployeeHasOverload>();
                 var targetEmployeeIds = new List<Guid>();
-                
+
                 if (model.ProjectId.HasValue)
                 {
                     var entity = await _dbContext.sm_Construction
@@ -293,7 +293,7 @@ namespace NSPC.Business.Services
                         .Select(x => x.EmployeeId)
                         .ToList() ?? new List<Guid>();
                 }
-                
+
                 if (targetEmployeeIds.Any())
                 {
                     var rawData = await _dbContext.sm_ExecutionTeams
@@ -315,7 +315,7 @@ namespace NSPC.Business.Services
                             TaskCount = pm.sm_Construction.Tasks.Count()
                         })
                         .ToListAsync();
-                    
+
                     list = rawData
                         .GroupBy(x => new { x.EmployeeId, x.EmployeeName })
                         .Where(g => g.Select(x => x.ConstructionId).Distinct().Count() >= 2)
@@ -1691,7 +1691,6 @@ namespace NSPC.Business.Services
                 var page = model.Page ?? 1;
                 var size = model.Size ?? 20;
 
-
                 // Lấy danh sách công trình từ cơ sở dữ liệu dựa trên lọc và phân trang
                 var query = _dbContext.sm_Construction.AsNoTracking()
                     .Include(x => x.sm_ExecutionTeams)
@@ -1699,20 +1698,28 @@ namespace NSPC.Business.Services
                     .Include(x => x.sm_ConstructionActivityLog)
                     .Include(x => x.sm_Investor)
                     .ThenInclude(x => x.InvestorType)
-                    .Where(predicate);
+                    .Where(predicate)
+                    .OrderByDescending(x => x.CreatedOnDate);
 
-                if (size <= 0)
+                // Nếu size = -1 thì xuất toàn bộ, không phân trang
+                List<sm_Construction> constructions;
+                if (size == -1)
                 {
-                    page = 1;
-                    size = 20;
+                    constructions = await query.ToListAsync();
                 }
+                else
+                {
+                    if (size <= 0)
+                    {
+                        page = 1;
+                        size = 20;
+                    }
 
-                query = query
-                    .OrderByDescending(x => x.CreatedOnDate)
-                    .Skip((page - 1) * size)
-                    .Take(size);
-
-                var constructions = await query.ToListAsync();
+                    constructions = await query
+                        .Skip((page - 1) * size)
+                        .Take(size)
+                        .ToListAsync();
+                }
 
                 var templateFilePath = Utils.CombineUnixPath(
                     ConfigCollection.Instance.StaticFiles_Folder,
@@ -2223,8 +2230,8 @@ namespace NSPC.Business.Services
                         .FirstOrDefault(x => x.Name == tuple.Row.GetValue<string>(6)).Id;
                     tuple.Constructions.OwnerTypeCode = _dbContext.sm_Investor.AsNoTracking()
                                                             .Include(x => x.InvestorType)
-                                                            .FirstOrDefault(
-                                                                x => x.Name == tuple.Row.GetValue<string>(6))
+                                                            .FirstOrDefault(x =>
+                                                                x.Name == tuple.Row.GetValue<string>(6))
                                                             ?.InvestorType?.Code
                                                         ?? _dbContext.sm_CodeType.FirstOrDefault(x =>
                                                             x.Title == tuple.Row.GetValue<string>(7))?.Code;
