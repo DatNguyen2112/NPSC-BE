@@ -125,7 +125,7 @@ namespace NSPC.Business.Services
                         CreatedByUserId = currentUser.UserId,
                         CreatedByUserName = currentUser.FullName,
                         CreatedOnDate = DateTime.Now,
-                        AvatarUrl = Utils.FetchHost(me.AvatarUrl),
+                        // AvatarUrl = Utils.FetchHost(me.AvatarUrl),
                         AdditionalData = new List<string> {"ISSUE", constructionName[0].Name, entity.Id.ToString() }
                     };
                     _dbContext.sm_TaskNotification.Add(notification);
