@@ -603,7 +603,7 @@ namespace NSPC.Business.Services.VehicleRequest
                     CreatedByUserId = currentUser.UserId,
                     CreatedByUserName = currentUser.FullName,
                     CreatedOnDate = DateTime.Now,
-                    AvatarUrl = Utils.FetchHost(me.AvatarUrl),
+                    // AvatarUrl = Utils.FetchHost(me.AvatarUrl),
                     AdditionalData = new List<string> { entity.DestinationLocation, entity.Id.ToString() }
                 };
                 _dbContext.sm_TaskNotification.Add(notification);
@@ -776,7 +776,7 @@ namespace NSPC.Business.Services.VehicleRequest
                             CreatedByUserId = currentUser.UserId,
                             CreatedByUserName = currentUser.FullName,
                             CreatedOnDate = DateTime.Now,
-                            AvatarUrl = Utils.FetchHost(me.AvatarUrl),
+                            // AvatarUrl = Utils.FetchHost(me.AvatarUrl),
                             AdditionalData = new List<string> { entity.DestinationLocation, entity.Id.ToString() }
                         };
                         _dbContext.sm_TaskNotification.Add(notification);
@@ -1304,7 +1304,7 @@ namespace NSPC.Business.Services.VehicleRequest
                             CreatedByUserId = currentUser.UserId,
                             CreatedByUserName = currentUser.FullName,
                             CreatedOnDate = DateTime.Now,
-                            AvatarUrl = Utils.FetchHost(me.AvatarUrl),
+                            // AvatarUrl = Utils.FetchHost(me.AvatarUrl),
                             AdditionalData = new List<string>
                                 { draftRequest.DestinationLocation, draftRequest.Id.ToString() }
                         };
@@ -1501,7 +1501,7 @@ namespace NSPC.Business.Services.VehicleRequest
                     CreatedByUserId = currentUser.UserId,
                     CreatedByUserName = currentUser.FullName,
                     CreatedOnDate = DateTime.Now,
-                    AvatarUrl = Utils.FetchHost(me.AvatarUrl),
+                    // AvatarUrl = Utils.FetchHost(me.AvatarUrl),
                     AdditionalData = new List<string> { entity.DestinationLocation, entity.Id.ToString() }
                 };
 
